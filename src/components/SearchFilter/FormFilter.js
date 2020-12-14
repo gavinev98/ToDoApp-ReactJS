@@ -4,9 +4,12 @@ import React from 'react';
 const FormFitler = ({setInputText}) => {
 
     const inputTextHandler = (e) => {
+        setInputText(e.target.value);  
+    };
 
-        setInputText(e.target.value);
-        
+    const submitToDoHander = (e) => {
+        //prevents page from reloading.
+        e.preventDefault();
     }
 
     return (  

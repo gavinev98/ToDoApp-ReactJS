@@ -19,7 +19,7 @@ function App() {
   <h1>Gavins Daily List </h1>
     </header>
     <FormFilter setInputText={setInputText} />
-    <ToDoList />
+    <ToDoList  />
     </div>
   );
 
