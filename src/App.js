@@ -1,5 +1,8 @@
 import './App.css';
 
+//importing components to be displayed.
+import FormFilter from '../src/components/SearchFilter/FormFilter';
+
 function App() {
 
 
