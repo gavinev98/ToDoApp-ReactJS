@@ -11,6 +11,7 @@ function App() {
     <header>
       <h1>Gavins Daily List</h1>
     </header>
+    <FormFilter />
     </div>
   );
 
