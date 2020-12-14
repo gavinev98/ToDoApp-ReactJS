@@ -1,13 +1,13 @@
 import React from 'react';
 
 //creating a function
-const FormFitler = ({setInputText, toDo, setToDoList}) => {
+const FormFitler = ({setInputText, toDo, setToDoList, inputText}) => {
 
     const inputTextHandler = (e) => {
         setInputText(e.target.value);  
     };
 
-    const submitToDoHander = (e) => {
+    const submitToDoHandler = (e) => {
         //prevents page from reloading.
         e.preventDefault();
         //setting our toDoList firstly by using the spread operator to copy existing.
@@ -23,7 +23,7 @@ const FormFitler = ({setInputText, toDo, setToDoList}) => {
     return (  
         <form>
         <input onChange={inputTextHandler} type="text" className="todo-input" />
-        <button onClick={submitToDoHander} className="todo-button" type="submit">
+        <button onClick={submitToDoHandler} className="todo-button" type="submit">
           <i className="fas fa-plus-square"></i>
         </button>
         <div className="select">
