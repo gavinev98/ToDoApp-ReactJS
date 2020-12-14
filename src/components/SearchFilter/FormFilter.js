@@ -1,10 +1,12 @@
 import React from 'react';
 
 //creating a function
-const FormFitler = () => {
+const FormFitler = ({setInputText}) => {
 
     const inputTextHandler = (e) => {
-        console.log("Testing");
+
+        setInputText(e.target.value);
+        
     }
 
     return (  

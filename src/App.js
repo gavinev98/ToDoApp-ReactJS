@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="App">
     <header>
-      <h1>Gavins Daily List</h1>
+  <h1>Gavins Daily List { inputText }</h1>
     </header>
-    <FormFilter />
+    <FormFilter setInputText={setInputText} />
     <ToDoList />
     </div>
   );
