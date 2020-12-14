@@ -8,12 +8,15 @@ import ToDoList from '../src/components/ToDoList/ToDoList';
 
 function App() {
 
+  //this is our first state object for input field.
    const[inputText, setInputText] = useState("");
+  //this is our second state object for ToDoList array.
+   const[toDo, setToDoList] = useState([]);
 
   return (
     <div className="App">
     <header>
-  <h1>Gavins Daily List { inputText }</h1>
+  <h1>Gavins Daily List </h1>
     </header>
     <FormFilter setInputText={setInputText} />
     <ToDoList />
