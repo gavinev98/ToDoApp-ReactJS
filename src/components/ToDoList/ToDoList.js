@@ -3,12 +3,14 @@ import React from 'react';
 //importing ToDoItems for rendering.
 import ToDoItem from '../ToDoList/ToDoItem';
 
-const ToDoList = () => {
-
+const ToDoList = ({toDo}) => {
+    
     return (
         <div className="todo-container">
         <ul className="todo-list">
-            <ToDoItem />
+        {toDo.map(todoItem => (
+           <ToDoItem />
+        ))}
             </ul>
       </div>
     );
