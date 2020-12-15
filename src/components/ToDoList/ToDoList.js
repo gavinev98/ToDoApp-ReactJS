@@ -9,7 +9,7 @@ const ToDoList = ({toDo}) => {
         <div className="todo-container">
         <ul className="todo-list">
         {toDo.map(todoItem => (
-           <ToDoItem />
+           <ToDoItem  />
         ))}
             </ul>
       </div>

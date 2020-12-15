@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const ToDoItem = () => {
+const ToDoItem = ({id , completed, text}) => {
 
     return (
         <div className="todo">
