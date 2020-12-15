@@ -9,7 +9,7 @@ const ToDoList = ({toDo}) => {
         <div className="todo-container">
         <ul className="todo-list">
         {toDo.map(todoItems => (
-           <ToDoItem id={todoItems.id} completed={todoItems.completed} text={todoItems.text} />
+           <ToDoItem key={todoItems.id} id={todoItems.id} completed={todoItems.completed} text={todoItems.text} />
         ))}
             </ul>
       </div>
