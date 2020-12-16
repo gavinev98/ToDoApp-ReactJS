@@ -32,7 +32,7 @@ const ToDoItem = ({id , completed, text, toDo, setToDoList}) => {
 
     return (
         <div className="todo">
-            <li className='todo-item'>{text}</li>
+            <li className={completed ? 'completed' : 'todo-item'}>{text}</li>
             <button onClick={() => completionHandler(id)} className="complete-btn" ><i className="fas fa-check"></i></button>
             <button onClick={() => deleteHandler(id)} className="trash-btn"><i className="fas fa-trash"></i></button>
         </div>
