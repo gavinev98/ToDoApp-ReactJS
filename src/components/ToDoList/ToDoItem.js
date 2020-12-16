@@ -12,10 +12,25 @@ const ToDoItem = ({id , completed, text, toDo, setToDoList}) => {
 
     }
 
+    //creating a completion handler for completed tasks
+    const completionHandler = (id) => {
+        //update current list
+        setToDoList(toDo.map(item => {
+            //loop over each item in the array.
+            //check if id matches the item clicked.
+            if(item.id === toDo.id) {
+              return {
+                  ...item,
+                  completed : !item.completed
+              }  
+            }
+        }))
+    }
+
     return (
         <div className="todo">
             <li className='todo-item'>{text}</li>
-            <button className="complete-btn" ><i className="fas fa-check"></i></button>
+            <button onClick={() => completionHandler(id)} className="complete-btn" ><i className="fas fa-check"></i></button>
             <button onClick={() => deleteHandler(id)} className="trash-btn"><i className="fas fa-trash"></i></button>
         </div>
 
