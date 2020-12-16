@@ -15,17 +15,20 @@ const ToDoItem = ({id , completed, text, toDo, setToDoList}) => {
     //creating a completion handler for completed tasks
     const completionHandler = (id) => {
         //update current list
-        setToDoList(toDo.map(item => {
+        setToDoList(toDo.map((item) => {
             //loop over each item in the array.
             //check if id matches the item clicked.
-            if(item.id === toDo.id) {
+            if(item.id === id) {
               return {
                   ...item,
                   completed : !item.completed
-              }  
+              };
             }
-        }))
-    }
+            return item;
+            
+            })
+        );
+    };
 
     return (
         <div className="todo">
