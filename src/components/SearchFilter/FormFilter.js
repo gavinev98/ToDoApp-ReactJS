@@ -23,7 +23,8 @@ const FormFitler = ({setInputText, toDo, setToDoList, inputText, setFilter}) => 
 
     const filterHandler = (e) => {
       //filter handler to display specific items depending on status
-      console.log(e);
+      //setting the filter state to value of dropdown.
+      setFilter(e.target.value);
     }
 
     return (  
