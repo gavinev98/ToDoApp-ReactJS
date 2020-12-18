@@ -13,6 +13,9 @@ function App() {
   //this is our second state object for ToDoList array.
    const[toDo, setToDoList] = useState([]);
 
+   //creating a state for filter option
+   const[filter, setFilter] = useState('all');
+
   return (
     <div className="App">
     <header>
