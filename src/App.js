@@ -21,7 +21,7 @@ function App() {
     <header>
   <h1>Gavins Daily List </h1>
     </header>
-    <FormFilter toDo={toDo} setToDoList={setToDoList} inputText={inputText} setInputText={setInputText} />
+    <FormFilter setFilter={setFilter} toDo={toDo} setToDoList={setToDoList} inputText={inputText} setInputText={setInputText} />
     <ToDoList toDo={toDo} setToDoList={setToDoList}  />
     </div>
   );

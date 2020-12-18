@@ -1,7 +1,7 @@
 import React from 'react';
 
 //creating a function
-const FormFitler = ({setInputText, toDo, setToDoList, inputText}) => {
+const FormFitler = ({setInputText, toDo, setToDoList, inputText, setFilter}) => {
 
     const inputTextHandler = (e) => {
         setInputText(e.target.value);  
@@ -21,6 +21,11 @@ const FormFitler = ({setInputText, toDo, setToDoList, inputText}) => {
         setInputText('');
     }
 
+    const filterHandler = (e) => {
+      //filter handler to display specific items depending on status
+      console.log(e);
+    }
+
     return (  
         <form>
         <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
@@ -28,7 +33,7 @@ const FormFitler = ({setInputText, toDo, setToDoList, inputText}) => {
           <i className="fas fa-plus-square"></i>
         </button>
         <div className="select">
-          <select name="todos" className="filter-todo">
+          <select onChange={filterHandler} name="todos" className="filter-todo">
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
