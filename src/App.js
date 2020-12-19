@@ -26,7 +26,7 @@ function App() {
    const filterHandler = () => {
       switch(status) {
         case 'completed':
-          setFilteredToDos(toDo.filter(todos => todos.completed == true));
+           setFilteredToDos(toDo.filter(todos => todos.completed == true));
         break;
         case 'uncompleted':
           setFilteredToDos(toDo.filter(todos => todos.completed == false));
@@ -43,6 +43,13 @@ function App() {
     filterHandler();
    }, [toDo, status]);
  
+   const saveLocalTodos = () => {
+     if(localStorage.getItems('todos') === null){
+       localStorage.setItem("todos", JSON.stringify([]));
+     }else {
+       localStorage.setItem("todos", JSON.stringify(toDo));
+     }
+   }
 
   return (
     <div className="App">
