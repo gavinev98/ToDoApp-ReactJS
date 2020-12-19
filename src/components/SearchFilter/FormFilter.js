@@ -1,7 +1,7 @@
 import React from 'react';
 
 //creating a function
-const FormFitler = ({setInputText, toDo, setToDoList, inputText, setFilter}) => {
+const FormFitler = ({setInputText, toDo, setToDoList, inputText, setStatus, setFilteredToDos}) => {
 
     const inputTextHandler = (e) => {
         setInputText(e.target.value);  
@@ -21,10 +21,10 @@ const FormFitler = ({setInputText, toDo, setToDoList, inputText, setFilter}) => 
         setInputText('');
     }
 
-    const filterHandler = (e) => {
+    const setStatusHandler = (e) => {
       //filter handler to display specific items depending on status
       //setting the filter state to value of dropdown.
-      setFilter(e.target.value);
+      setStatus(e.target.value);
     }
 
     return (  
@@ -34,7 +34,7 @@ const FormFitler = ({setInputText, toDo, setToDoList, inputText, setFilter}) => 
           <i className="fas fa-plus-square"></i>
         </button>
         <div className="select">
-          <select onChange={filterHandler} name="todos" className="filter-todo">
+          <select onChange={setStatusHandler} name="todos" className="filter-todo">
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>

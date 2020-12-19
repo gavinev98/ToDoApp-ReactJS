@@ -13,16 +13,31 @@ function App() {
   //this is our second state object for ToDoList array.
    const[toDo, setToDoList] = useState([]);
 
-   //creating a state for filter option
-   const[filter, setFilter] = useState('all');
+   //creating a status state for filter option
+   const[status, setStatus] = useState('all');
+
+   //creating a list of objects for the filtered list.
+   const [filteredTodos, setFilteredToDos] = useState([]);
+
+   const filterHandler = () => {
+      switch(status) {
+        case 'completed':
+          setFilteredToDos(toDo.filter(todos => todos.completed == true));
+        break;
+        case 'uncom'
+
+      }
+
+
+   }
 
   return (
     <div className="App">
     <header>
   <h1>Gavins Daily List </h1>
     </header>
-    <FormFilter setFilter={setFilter} toDo={toDo} setToDoList={setToDoList} inputText={inputText} setInputText={setInputText} />
-    <ToDoList toDo={toDo} setToDoList={setToDoList}  />
+    <FormFilter setFilteredToDos={setFilteredToDos} setStatus={setStatus} toDo={toDo} setToDoList={setToDoList} inputText={inputText} setInputText={setInputText} />
+    <ToDoList filteredTodos={filteredTodos} toDo={toDo} setToDoList={setToDoList}  />
     </div>
   );
 
