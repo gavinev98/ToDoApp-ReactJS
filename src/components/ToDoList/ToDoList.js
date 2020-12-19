@@ -3,12 +3,12 @@ import React from 'react';
 //importing ToDoItems for rendering.
 import ToDoItem from '../ToDoList/ToDoItem';
 
-const ToDoList = ({toDo, setToDoList}) => {
+const ToDoList = ({toDo, setToDoList, filteredTodos}) => {
     
     return (
         <div className="todo-container">
         <ul className="todo-list">
-        {toDo.map(todoItems => (
+        {filteredTodos.map(todoItems => (
         <ToDoItem  toDo={toDo} setToDoList={setToDoList} key={todoItems.id} id={todoItems.id} completed={todoItems.completed} text={todoItems.text}  />
        ))}
 

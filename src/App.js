@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 
 import './App.css';
 //importing components to be displayed.
@@ -19,6 +19,10 @@ function App() {
    //creating a list of objects for the filtered list.
    const [filteredTodos, setFilteredToDos] = useState([]);
 
+
+
+   
+    //fitler handler for 
    const filterHandler = () => {
       switch(status) {
         case 'completed':
@@ -32,9 +36,13 @@ function App() {
         break;
 
       }
-
-
    }
+
+     //with useEffect we can run a function everytime a piece of state changes.
+    useEffect(() => {
+    filterHandler();
+   }, [toDo, status]);
+ 
 
   return (
     <div className="App">
