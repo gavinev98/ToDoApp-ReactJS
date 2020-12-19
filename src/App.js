@@ -24,7 +24,12 @@ function App() {
         case 'completed':
           setFilteredToDos(toDo.filter(todos => todos.completed == true));
         break;
-        case 'uncom'
+        case 'uncompleted':
+          setFilteredToDos(toDo.filter(todos => todos.completed == false));
+        break;
+        case 'all':
+          setFilteredToDos(toDo);
+        break;
 
       }
 
